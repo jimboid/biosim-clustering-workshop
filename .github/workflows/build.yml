@@ -1,4 +1,4 @@
-name: clustering workshop
+name: build
 
 on:
   repository_dispatch:
