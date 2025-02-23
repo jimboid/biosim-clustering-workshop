@@ -12,10 +12,8 @@ USER $NB_USER
 WORKDIR $HOME
 
 # Install workshop deps
-RUN conda install mdtraj matplotlib numpy scipy -y
-RUN conda install ipywidgets -c conda-forge -y
-RUN pip install mdplus
-RUN pip install rlcluster
+RUN conda install matplotlib numpy scipy ipywidgets -y
+RUN pip install mdplus mdtraj rlcluster
 
 # Copy updated lab workspace
 COPY --chown=1000:100 default-37a8.jupyterlab-workspace /home/jovyan/.jupyter/lab/workspaces/default-37a8.jupyterlab-workspace
